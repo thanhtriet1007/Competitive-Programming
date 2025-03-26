@@ -13,9 +13,12 @@ const int       N      = 1e6 + 7;
 const long long oo     = 1e18 + 7;
 const long long MOD    = 1e9 + 7;
 
+int n;
+
 void solve() {
     // Trie's solution here 
-
+    cin >> n;
+    cout << n;
 }
 
 #define TASK "test"
@@ -23,7 +26,7 @@ void solve() {
 signed main()
 {
    ios_base::sync_with_stdio(false), cin.tie(0), cout.tie(0);
-   
+
    solve();
    return 0;
 }
