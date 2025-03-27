@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{a4paper}
+\usepackage[utf8]{inputenc} 
+\usepackage[vietnamese]{babel} 
+\usepackage{array} 
+
+\geometry{top=1cm, bottom=1.5cm, left=1cm, right=1cm}
+
+\begin{document}
+
+\title{Trò chơi trên vòng tròn -- CIRCLE}
+\author{Binh Thuan Summer Camp - VOI26 Training}
+\maketitle
+
+\subsection*{Mô tả bài toán}
+Cho một tập số nguyên rỗng rạc, trong đó mỗi số nguyên trị từ 1 đến N thuộc vào một trong M tập con của tập số nguyên này. Các tập con 1, 2, 3, \dots, M được sắp xếp lần lượt trong tập các tập con theo chiều kim đồng hồ (tập M là tập cuối cùng).
+
+\subsection*{Dữ liệu}
+\begin{itemize}
+  \item Dòng đầu tiên cho biết số nguyên dữ liệu N, M, Q.
+  \item Dòng thứ 2 cho biết D chiều dài dữ liệu.
+\end{itemize}
+
+\subsection*{Kết quả}
+Giới hạn số lượng tối đa các kết quả đáp trả.
+
+\subsection*{Subtask}
+\begin{itemize}
+  \item Subtask 1: \( T \) không vượt quá 1,000.
+  \item Subtask 2: \( T \) không vượt quá 100.
+  \item Subtask 3: Số chấp nhận là gì.
+\end{itemize}
+
+\subsection*{Ví dụ}
+
+\begin{center}
+\begin{tabular}{|>{\raggedright\arraybackslash}p{7cm}|>{\raggedright\arraybackslash}p{7cm}|}
+\hline
+\textbf{input} & \textbf{output} \\
+\hline
+2 & 11+0+1101 \\
+1101101 & 10+1+0+1 \\
+10101 &  \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}
