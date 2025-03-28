@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.3.28)  28 MAR 2025 15:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.3.28)  28 MAR 2025 16:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/home/trie/Code/CP/Competitive-Programming/fileLatex.tex
-(/home/trie/Code/CP/Competitive-Programming/fileLatex.tex
+**/home/trie/Code/CP/Competitive-Programming/Latex/fileLatex.tex
+(/home/trie/Code/CP/Competitive-Programming/Latex/fileLatex.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-01-21> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
@@ -318,22 +318,22 @@ File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 ))
 \openout1 = `fileLatex.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 12.
-LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count277
@@ -395,12 +395,12 @@ pdfTeX warning: pdflatex (file pdftex.map): cannot open font map file
 ] (./fileLatex.aux) ) 
 Here is how much of TeX's memory you used:
  4014 strings out of 480247
- 62540 string characters out of 5896106
+ 62558 string characters out of 5896106
  372014 words of memory out of 5000000
  21937 multiletter control sequences out of 15000+600000
  479251 words of font info for 51 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 55i,8n,62p,399b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,8n,62p,405b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/vntex/vnr/vnbx12.600pk> </home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmmi12.600pk> </home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/vntex/vnr/vnr12.600pk> </home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/vntex/vnr/vnbx12.720pk> </home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/vntex/vnr/vnr12.720pk> </home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/vntex/vnr/vnr17.732pk>
 Output written on fileLatex.pdf (1 page, 53307 bytes).
 PDF statistics:

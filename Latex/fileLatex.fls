@@ -1,9 +1,9 @@
-PWD /home/trie/Code/CP/Competitive-Programming
+PWD /home/trie/Code/CP/Competitive-Programming/Latex
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /home/trie/.texlive2021/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /home/trie/Code/CP/Competitive-Programming/fileLatex.tex
+INPUT /home/trie/Code/CP/Competitive-Programming/Latex/fileLatex.tex
 OUTPUT fileLatex.log
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
