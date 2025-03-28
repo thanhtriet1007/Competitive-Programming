@@ -1,9 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1743191091 "/home/trie/Code/CP/Competitive-Programming/Latex/fileLatex.tex" "fileLatex.pdf" "fileLatex" 1743191091
+["pdflatex"] 1743192615 "/home/trie/Code/CP/Competitive-Programming/Latex/fileLatex.tex" "fileLatex.pdf" "fileLatex" 1743192615
   "/etc/texmf/web2c/texmf.cnf" 1743151989 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk" 1743152014 14040 651acfd40c7a1bc25e6e32e6e52c7374 ""
   "/home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmmi12.600pk" 1743152012 17936 132a28b725bd30892286d7b8b17bb4bc ""
-  "/home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmmi8.600pk" 1743189851 11680 664f831164e13a11ca4b0a3ecbc07efe ""
   "/home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmsy10.720pk" 1743189850 16448 938b4d12e6862419600b8a51e2180992 ""
   "/home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/vntex/vnr/vnbx12.600pk" 1743152010 34536 2208d5b8b1715c5fbdb78f505afa5d08 ""
   "/home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/vntex/vnr/vnbx12.720pk" 1743152017 43708 fbb4d8edf930be8ef92ea864549bbf10 ""
@@ -11,7 +10,7 @@
   "/home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/vntex/vnr/vnr12.720pk" 1743152019 38104 2bb6bcc80453e92e4731f7a29ae92cd0 ""
   "/home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/vntex/vnr/vnr17.732pk" 1743152020 59148 69a383e90a949ac360796c9e85d8a701 ""
   "/home/trie/.texlive2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1743152007 1405754 012245ade89b300c53d4f2796c19cb0d ""
-  "/home/trie/Code/CP/Competitive-Programming/Latex/fileLatex.tex" 1743191091 2200 1f7d35147893b8f64120295250e24e99 ""
+  "/home/trie/Code/CP/Competitive-Programming/Latex/fileLatex.tex" 1743192615 1931 7a17352962de3404609b3558e62a47bd ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr12.pk" 1136849718 13144 0235be32b099c919a01c28a385c0ff86 ""
   "/usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8.pk" 1136849718 8868 6802580824d038b2553e8b2aaa199234 ""
@@ -61,8 +60,8 @@
   "/usr/share/texlive/texmf-dist/tex/latex/vntex/t5enc.dfu" 1164574466 13949 387dd4fa58aea5f873839c93430fffed ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
-  "fileLatex.aux" 1743191091 135 ced61d8ee79862690b0bfffa052963b6 "pdflatex"
-  "fileLatex.tex" 1743191091 2200 1f7d35147893b8f64120295250e24e99 ""
+  "fileLatex.aux" 1743192615 135 ced61d8ee79862690b0bfffa052963b6 "pdflatex"
+  "fileLatex.tex" 1743192615 1931 7a17352962de3404609b3558e62a47bd ""
   (generated)
   "fileLatex.aux"
   "fileLatex.log"
