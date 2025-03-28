@@ -10,27 +10,39 @@
 \geometry{top=1cm, bottom=1.5cm, left=1cm, right=1cm}
 \begin{document}
 
-\title{Trò chơi trên vòng tròn -- CIRCLE}
+\title{Chiều cao - HEIGHT}
 \author{Binh Thuan Summer Camp - VOI26 Training}
 \maketitle
 
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em} 
+
 \subsection*{Mô tả bài toán}
-Cho một tập số nguyên rỗng rạc, trong đó mỗi số nguyên trị từ 1 đến N thuộc vào một trong M tập con của tập số nguyên này. Các tập con 1, 2, 3, \dots, M được sắp xếp lần lượt trong tập các tập con theo chiều kim đồng hồ (tập M là tập cuối cùng).
+Trie đang trong tiết học thể dục. Thầy giáo bảo cả lớp xếp thành một hàng ngang. 
+Lớp học của Trie có n học sinh, khi xếp thành hàng ngang, các học sinh được đánh số từ 1 tới n theo 
+thứ tự từ trái qua phải. Học sinh thứ i có chiều cao $h_i$.
+
+Hai học sinh i và j có thể nhìn thấy nhau nếu như giữa họ không có học sinh nào có chiều cao lớn hơn. 
+Cụ thể hơn, học sinh i và j ($i < j$) nhìn thấy nhau nếu như $h_k \leq h_i$ và $h_k \leq h_j$ ($\forall i < k < j$).
+
+Trie muốn biết với mỗi học sinh, người đó có thể nhìn thấy bao nhiêu học sinh khác mà có cùng chiều cao với họ.
 
 \subsection*{Dữ liệu}
 \begin{itemize}
-  \item Dòng đầu tiên cho biết số nguyên dữ liệu N, M, Q.
-  \item Dòng thứ 2 cho biết D chiều dài dữ liệu.
+  \item Dòng đầu tiên chứa số nguyên dương \(q \) (1 $\leq$ $q$ $\leq$ 10) - số truy vấn.
+  \item Mỗi truy vấn gồm hai dòng, dòng thứ nhất chứa số nguyên dương $n$ (1 $\leq$ $n$ $\leq$ $10^5$).
+  \item Dòng thứ hai chứa $n$ số nguyên dương $h_1, h_2, h_3,..., h_n $ (1 $\leq$ $h_i$ $\leq$ $10^9$).
 \end{itemize}
 
 \subsection*{Kết quả}
-Giới hạn số lượng tối đa các kết quả đáp trả.
+\begin{itemize} 
+  \item Với mỗi truy vấn, in ra trên một dòng n số nguyên cách nhau bởi dấu cách là câu trả lời cho truy vấn đó.
+\end{itemize}
 
 \subsection*{Subtask}
 \begin{itemize}
-  \item Subtask 1: \( T \) không vượt quá 1,000.
-  \item Subtask 2: \( T \) không vượt quá 100.
-  \item Subtask 3: Số chấp nhận là.
+  \item Subtask 1: \(n\) không vượt quá 1000.
+  \item Subtask 2: Không có ràng buộc gì thêm.
 \end{itemize}
 
 \subsection*{Ví dụ}
@@ -40,9 +52,9 @@ Giới hạn số lượng tối đa các kết quả đáp trả.
 \hline
 \textbf{input} & \textbf{output} \\
 \hline
-2 & 11+0+1101 \\
-1101101 & 10+1+0+1 \\
-10101 &  \\
+1 & 0 1 1 0 0 \\
+5&  \\
+1 2 2 3 2 &  \\
 \hline
 \end{tabular}
 \end{center}
