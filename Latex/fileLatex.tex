@@ -10,7 +10,7 @@
 \geometry{top=1cm, bottom=1.5cm, left=1cm, right=1cm}
 \begin{document}
 
-\title{Cửa sổ - SURAJ}
+\title{Du lịch - TRAVEL}
 \author{Binh Thuan Summer Camp - VOI26 Training}
 \maketitle
 
@@ -18,17 +18,26 @@
 \setlength{\parskip}{1em} 
 
 \subsection*{Mô tả bài toán}
-Một coder trẻ với mật danh Hecker đã chiến thắng giải đấu Surajet Open và giành được chiếc laptop Surajook độc quyền của nhà tài trợ Suraj. Chiếc laptop này có cài đặt sẵn một trình duyệt internet do công ty Suraj phát triển vói các thử nghiệm hết sức độc đáo. Tuy nhiên trình duyệt bị giới hạn khi chỉ có thể mở được nhiều nhất k cửa sổ và tab thứ i trong mỗi cửa sổ i chiếm i megabytes trong bộ nhớ. Hecker cho biết chiếc laptop mới có bộ nhớ m megabytes. Bạn hãy giúp Hecker tính xem câu ta có thể mở được nhiều nhất là bao nhiêu tab.
+Đất nước TrieCountry có $N$ thành phố và $N - 1$ cung đường nối các thành phố với nhau. Có thể đi từ thành phố này qua thành phố khác bằng cách đi ngang qua các cung đường có sẵn. Thành phố i có giá trị du lịch là $a_i$. Triết là một người đam mê khám phá, nên cậu ta quyết định đi du lịch đến đất nước TrieCountry. Chi phí để đi qua cung đường nối 2 thành phố i và j là $ \max(a_i + a_j, |a_i - a_j|)$. Triết sẽ du lịch ở thành phố $Q$ ngày, tại một ngày bất kì, chính phủ sẽ thay đổi giá trị du dịch
+của thành phố  $u$ thành một giá trị mới là $X$, ngày đó du lịch sẽ không hoạt động và Triết sẽ không
+đi được đâu. Do để được tham quan nhiều nhất có thể, mỗi ngày ở quốc gia TrieCountry có thể tham
+quan Triết sẽ xuất phát từ thành phố $u$ và đến thành phố $v$. Để tiết kiệm chi phí Minh sẽ chọn
+lộ trình đi có giá thành rẻ nhất.
+
+Với $Q$ ngày ở đất nước TrieCountry, các bạn hãy tính giúp Triết chi phí du lịch nếu như ngày đó thành
+phố không dừng hoạt động du lịch.
 
 \subsection*{Dữ liệu}
 \begin{itemize}
-  \item Dòng đầu tiên gồm một số nguyên $T$ $(1 \leq T \leq 10^5)$.
-  \item Dòng thứ i + 1 $(1 \leq i \leq T)$ gồm hai số nguyên $m$, $k$ $(1 \leq m \leq 10^{18}$, $1 \leq k \leq 10^9)$ là tổng bộ nhớ của Surajook và số cửa sổ nhiều nhất có thể mở.
+  \item Dòng đầu tiên chứa hai số nguyên $N, Q$ $(1 \leq N \leq 10^5, 1 \leq Q \leq 10^5)$.
+  \item Dòng tiếp theo chứa $N$ số nguyên. Số nguyên thứ i là $a_i (-10^9 \leq a_i \leq 10^9)$.
+  \item $N - 1$ dòng tiếp theo chứa 2 số nguyên u và v khác nhau biểu thị cho cung đường nối hai thành phố u và v $(1 \leq u, v \leq N)$.
+  \item $Q$ dòng tiếp theo, chứa 3 số nguyên $q, u, v$. Nếu $q = 1$ biểu thị cho ngày hôm đó chính phủ sẽ dừng hoạt động du lịch và thay đổi giá trị du lịch của thành phố u thành v. Nếu $q = 2$ biểu thị cho ngày đó Triết sẽ đi du lịch từ thành phố u đến thành phố v.
 \end{itemize}
 
 \subsection*{Kết quả}
 \begin{itemize}
-  \item Gồm $T$ dòng, mỗi dòng gồm một số nguyên duy nhất là số tab nhiều nhất mà Hecker có thể mở.
+  \item Với mỗi ngày Triết được du lịch, hãy xuất ra chi phí du lịch của ngày hôm đó.
 \end{itemize}
 
 \subsection*{Ví dụ}
@@ -37,9 +46,15 @@ Một coder trẻ với mật danh Hecker đã chiến thắng giải đấu Sur
 \hline
 \textbf{input} & \textbf{output} \\
 \hline
-2 & 10 \\
-23 3 & 2 \\
-2 3 & \\
+4 4 & 2102 \\
+2 -1000 100 3 & 0 \\
+2 1 & 1000000003 \\
+3 2 &  \\
+4 1 & \\
+2 1 3 & \\
+2 2 2 & \\
+1 1 -1000000000 & \\
+2 1 4 & \\
 \hline
 \end{tabular}
 \end{center}
