@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1743229028 "/home/trie/Code/CP/Competitive-Programming/Latex/fileLatex.tex" "fileLatex.pdf" "fileLatex" 1743229028
+["pdflatex"] 1743229185 "/home/trie/Code/CP/Competitive-Programming/Latex/fileLatex.tex" "fileLatex.pdf" "fileLatex" 1743229185
   "/etc/texmf/web2c/texmf.cnf" 1743151989 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk" 1743152014 14040 651acfd40c7a1bc25e6e32e6e52c7374 ""
   "/home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmmi12.600pk" 1743152012 17936 132a28b725bd30892286d7b8b17bb4bc ""
@@ -11,7 +11,7 @@
   "/home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/vntex/vnr/vnr12.720pk" 1743152019 38104 2bb6bcc80453e92e4731f7a29ae92cd0 ""
   "/home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/vntex/vnr/vnr17.732pk" 1743152020 59148 69a383e90a949ac360796c9e85d8a701 ""
   "/home/trie/.texlive2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1743152007 1405754 012245ade89b300c53d4f2796c19cb0d ""
-  "/home/trie/Code/CP/Competitive-Programming/Latex/fileLatex.tex" 1743229027 2496 e862df3893484079bac64be0b01d7413 ""
+  "/home/trie/Code/CP/Competitive-Programming/Latex/fileLatex.tex" 1743229185 2495 e304776404f98c8ecbaf72ac5fa3e627 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr12.pk" 1136849718 13144 0235be32b099c919a01c28a385c0ff86 ""
   "/usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8.pk" 1136849718 8868 6802580824d038b2553e8b2aaa199234 ""
@@ -61,8 +61,8 @@
   "/usr/share/texlive/texmf-dist/tex/latex/vntex/t5enc.dfu" 1164574466 13949 387dd4fa58aea5f873839c93430fffed ""
   "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
-  "fileLatex.aux" 1743229028 135 90f146ce6fb35f4e4253ee93993801e1 "pdflatex"
-  "fileLatex.tex" 1743229027 2496 e862df3893484079bac64be0b01d7413 ""
+  "fileLatex.aux" 1743229185 135 90f146ce6fb35f4e4253ee93993801e1 "pdflatex"
+  "fileLatex.tex" 1743229185 2495 e304776404f98c8ecbaf72ac5fa3e627 ""
   (generated)
   "fileLatex.aux"
   "fileLatex.log"
