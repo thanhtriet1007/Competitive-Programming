@@ -10,7 +10,7 @@
 \geometry{top=1cm, bottom=1.5cm, left=1cm, right=1cm}
 \begin{document}
 
-\title{Hành trình leo núi - CLIMBING}
+\title{AQUERY}
 \author{Binh Thuan Summer Camp - VOI26 Training}
 \maketitle
 
@@ -18,28 +18,25 @@
 \setlength{\parskip}{1em} 
 
 \subsection*{Mô tả bài toán}
-Sau một thời gian lưu lạc xứ sở Shurima, Triết quyết định lên đường đi leo núi để thử thách bản thân. Địa điểm
-Triết leo rất đặc biệt. Ở đây có $n$ đỉnh núi được đánh số từ $1$ tới $n$. Đỉnh núi thứ $i$ có độ cao là $a_i$.
-Nhưng Triết lại khá lười nên việc leo cả $n$ ngọn núi là một điều vô cùng khó khăn với anh. Vì thế, Triết
-đã nghĩ ra kế hoạch leo núi vô cùng thông minh và tiết kiệm công sức. Theo kế hoạch thì Triết sẽ
-xuất phát tại một đỉnh núi nào đó và leo đúng $m$ ngọn núi (bao gồm cả đỉnh núi xuất phát). Đồng
-thời để việc leo núi đỡ vất vả hơn thì chênh lệch độ cao giữa của đỉnh núi cao nhất và thấp nhất
-trong kế hoạch của Triết không vượt quá $c$. Sau khi nghĩ ra kế hoạch siêu trí tuệ này thì Triết lại
-không biết những đỉnh núi mình nên xuất phát là đỉnh núi nào vì vậy Triết nhờ các bạn hãy giúp
-Triết nhé!
+Cho một dãy A gồm N phần tử. Ban đầu, giá trị của các phần tử đều bằng 0. Có Q truy vấn,
+truy vấn thứ i được mô tả bởi hai số nguyên $r_i$ và $p_i$, yêu cầu thực hiện $p_i$ lần các thao tác sau:
+\begin{itemize}
+  \item Chọn phần tử có giá trị nhỏ nhất trong các phần tử có vị trí từ 1 đến ri. Nếu có nhiều phần
+  tử có cùng giá trị nhỏ nhất, chọn phần tử có vị trí nhỏ nhất trong số chúng.
+  \item Tăng giá trị của phần tử được chọn thêm 1.
+\end{itemize}
+Hãy cho biết giá trị các phần tử trong dãy A sau khi thực hiện Q truy vấn trên.
 
 \subsection*{Dữ liệu}
 \begin{itemize}
-  \item Dòng đầu tiên gồm số 3 nguyên: $n$ là số lượng đỉnh núi $(1 \leq n \leq 1000000)$, $m$ là số lượng
-  đỉnh núi liên tiếp cần leo $(1 \leq m \leq min(n, 10000))$, $c$ là chênh lệch tối đa $(0 \leq c \leq 10000)$.
-  \item Dòng thứ hai gồm $n$ số nguyên $a_i$ là độ cao của núi thứ $i$ $(0 \leq a_i \leq 10000000)$.
+  \item Dòng đầu tiên gồm hai số nguyên N, Q $(1 \leq N, Q \leq 10^5)$ - số phần tử của dãy A và số truy
+  vấn cần thực hiện.
+  \item Q dòng tiếp theo, mỗi dòng gồm hai số nguyên $r_i$ và $p_i$ $(1 \leq r_i \leq N, 1 \leq p_i \leq 9 * 10^8)$ - mô tả truy vấn thứ i.
 \end{itemize}
 
 \subsection*{Kết quả}
 \begin{itemize}
-  \item Liệt kê tất cả vị trí đỉnh núi khác nhau mà Triết có thể xuất phát để đạt được kế hoạch của mình.
-  Các vị trí được in ra theo thứ tự tăng dần và mỗi dòng là một vị trí. Nếu không có vị trí nào thỏa
-  thì in ra NONE.
+  \item In ra N số nguyên lần lượt là giá trị các phần tử trong dãy A sau khi thực hiện Q truy vấn
 \end{itemize}
 
 
@@ -49,10 +46,10 @@ Triết nhé!
 \hline
 \textbf{input} & \textbf{output} \\
 \hline
-7 2 0 & 2 \\
-0 1 1 2 3 2 2 & 6\\
-& \\
-& \\
+8 3  & 4 4 3 3 3 2 1 1 \\
+3 11 &\\
+8 7  & \\
+6 3  & \\
 & \\
 & \\
 & \\

@@ -276,10 +276,11 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/vntex/vnr/vnbx12.tfm
 OUTPUT fileLatex.pdf
 INPUT fileLatex.aux
 INPUT /home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/vntex/vnr/vnbx12.600pk
+INPUT /usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8.pk
 INPUT /home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmsy10.720pk
+INPUT /usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr12.pk
 INPUT /home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk
 INPUT /home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmmi8.600pk
-INPUT /usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr12.pk
 INPUT /home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmmi12.600pk
 INPUT /home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/vntex/vnr/vnr12.600pk
 INPUT /home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/vntex/vnr/vnbx12.720pk
