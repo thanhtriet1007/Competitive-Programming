@@ -10,7 +10,7 @@
 \geometry{top=1cm, bottom=1.5cm, left=1cm, right=1cm}
 \begin{document}
 
-\title{Đầu tư - CITY}
+\title{Hành trình leo núi - CLIMBING}
 \author{Binh Thuan Summer Camp - VOI26 Training}
 \maketitle
 
@@ -18,39 +18,30 @@
 \setlength{\parskip}{1em} 
 
 \subsection*{Mô tả bài toán}
-Thành phố TrieCountry hiện đang có X + Y + Z mảnh đất trống, được đánh số từ 1 đến X + Y + Z.
-Anh Long - một tỉ phú của thành phố TrieCountry, chủ tịch tập đoàn Real Betis - đã quyết định mua
-lại X + Y + Z mảnh đất này. Với mảnh đất thứ $i$, anh có thể xây dựng một trong ba công trình
-sau:
-
-\begin{itemize}
-  \item Trung tâm thương mại với lợi nhuận $A_i$.
-  \item Khu vui chơi với lợi nhuận $B_i$.
-  \item Nhà hàng với lợi nhuận $C_i$.
-\end{itemize}
-
-Qua nghiên cứu thị trường, anh Long cho rằng nên xây dựng đúng X trung tâm mua sắm, Y khu
-vui chơi và Z nhà hàng. Hãy tính tổng lợi nhuận tối đa mà anh Long có thể thu được nếu xây
-dựng các công trình trên một cách tối ưu.
+Sau một thời gian lưu lạc xứ sở Shurima, Triết quyết định lên đường đi leo núi để thử thách bản thân. Địa điểm
+Triết leo rất đặc biệt. Ở đây có $n$ đỉnh núi được đánh số từ $1$ tới $n$. Đỉnh núi thứ $i$ có độ cao là $a_i$.
+Nhưng Triết lại khá lười nên việc leo cả $n$ ngọn núi là một điều vô cùng khó khăn với anh. Vì thế, Triết
+đã nghĩ ra kế hoạch leo núi vô cùng thông minh và tiết kiệm công sức. Theo kế hoạch thì Triết sẽ
+xuất phát tại một đỉnh núi nào đó và leo đúng $m$ ngọn núi (bao gồm cả đỉnh núi xuất phát). Đồng
+thời để việc leo núi đỡ vất vả hơn thì chênh lệch độ cao giữa của đỉnh núi cao nhất và thấp nhất
+trong kế hoạch của Triết không vượt quá $c$. Sau khi nghĩ ra kế hoạch siêu trí tuệ này thì Triết lại
+không biết những đỉnh núi mình nên xuất phát là đỉnh núi nào vì vậy Triết nhờ các bạn hãy giúp
+Triết nhé!
 
 \subsection*{Dữ liệu}
 \begin{itemize}
-  \item Dòng đầu tiên chứa ba số nguyên dương X, Y , Z $(X + Y + Z \leq 10^5)$ - số trung tâm thương mại, khu vui chơi và nhà hàng cần xây dựng.
-  \item X + Y + Z dòng tiếp theo, mỗi dòng gồm ba số nguyên $A_i, B_i, C_i$ $(0 \leq A_i, B_i, C_i \leq 10^9)$ lần 
-  lượt là lợi nhuận thu được khi xây dựng trung tâm thương mại, khu vui chơi và nhà hàng ở mảnh đất thứ i.
+  \item Dòng đầu tiên gồm số 3 nguyên: $n$ là số lượng đỉnh núi $(1 \leq n \leq 1000000)$, $m$ là số lượng
+  đỉnh núi liên tiếp cần leo $(1 \leq m \leq min(n, 10000))$, $c$ là chênh lệch tối đa $(0 \leq c \leq 10000)$.
+  \item Dòng thứ hai gồm $n$ số nguyên $a_i$ là độ cao của núi thứ $i$ $(0 \leq a_i \leq 10000000)$.
 \end{itemize}
 
 \subsection*{Kết quả}
 \begin{itemize}
-  \item Gồm một số nguyên duy nhất là tổng lợi nhuận tối đa.
+  \item Liệt kê tất cả vị trí đỉnh núi khác nhau mà Triết có thể xuất phát để đạt được kế hoạch của mình.
+  Các vị trí được in ra theo thứ tự tăng dần và mỗi dòng là một vị trí. Nếu không có vị trí nào thỏa
+  thì in ra NONE.
 \end{itemize}
 
-\subsection*{Cách tính điểm} 
-\begin{itemize}
-  \item Subtask 1 (20\% số điểm): $B_i = C_i$.
-  \item Subtask 2 (30\% số điểm): $C_i = 0$.
-  \item Subtask 3 (50\% số điểm): Không có ràng buộc gì thêm.
-\end{itemize}
 
 \subsection*{Ví dụ}
 \begin{center}
@@ -58,15 +49,15 @@ dựng các công trình trên một cách tối ưu.
 \hline
 \textbf{input} & \textbf{output} \\
 \hline
-3 2 1 & 35 \\
-0 3 2 & \\
-1 4 9 & \\
-5 3 2 & \\
-7 5 9 & \\
-4 8 9 & \\
-3 0 4 & \\
-      & \\
-      & \\
+7 2 0 & 2 \\
+0 1 1 2 3 2 2 & 6\\
+& \\
+& \\
+& \\
+& \\
+& \\
+& \\
+& \\
 \hline
 \end{tabular}
 \end{center}
