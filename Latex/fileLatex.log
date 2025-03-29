@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.3.28)  29 MAR 2025 20:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2025.3.28)  29 MAR 2025 20:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -392,7 +392,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 
 
 pdfTeX warning: pdflatex (file pdftex.map): cannot open font map file
-] (./fileLatex.aux) ) 
+] [2] (./fileLatex.aux) ) 
 Here is how much of TeX's memory you used:
  4013 strings out of 480247
  62543 string characters out of 5896106
@@ -402,10 +402,10 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  55i,8n,62p,275b,353s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/vntex/vnr/vnbx12.600pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr8.pk> </home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmsy10.720pk> </usr/share/texlive/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr12.pk> </home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmmi8.600pk> </home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/public/cm/cmmi12.600pk> </home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/vntex/vnr/vnr12.600pk> </home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/vntex/vnr/vnbx12.720pk> </home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/vntex/vnr/vnr12.720pk> </home/trie/.texlive2021/texmf-var/fonts/pk/ljfour/vntex/vnr/vnr17.732pk>
-Output written on fileLatex.pdf (1 page, 55512 bytes).
+Output written on fileLatex.pdf (2 pages, 62236 bytes).
 PDF statistics:
- 210 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
+ 231 PDF objects out of 1000 (max. 8388607)
+ 50 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
