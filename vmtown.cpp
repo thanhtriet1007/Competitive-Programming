@@ -41,7 +41,22 @@ void hld(int u, int p) {
     if (chainHead[curChain] == 0) {
         chainHead[curChain] = u;
     }
-
+    chainId[u] = curChain;
+    pos[u] = curPos;    
+    ++curPos;
+    int nxt = 0;
+    for (int &v : adj[u]) {
+        if (v == p) continue;
+        if (nxt == 0 || sizeOfSubtree[v] > sizeOfSubtree[nxt]) {
+            nxt = v;
+        }
+    }
+    if (nxt) hld(nxt, u);
+    for (int &v : adj[u]) {
+        if (v == p || v == nxt) continue;
+        ++curChain;
+        hld(v, u);
+    }
 }
 
 void solve() {
