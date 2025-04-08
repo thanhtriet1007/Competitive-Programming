@@ -13,69 +13,10 @@ const int       N      = 1e6 + 7;
 const long long oo     = 1e18 + 7;
 const long long MOD    = 1e9 + 7;
 
-int n, m;
-
-struct dat {
-    int u, v, op;
-}edge[N];
-
-int par[N], depth[N], sizeOfSubtree[N];
-int chainId[N], chainHead[N], pos[N];
-
-int curChain, curPos;
-
-vector<int>adj[N];
-
-void preDfs(int u, int p) {
-    sizeOfSubtree[u]++;
-    for (int &v : adj[u]) {
-        if (v == p) continue;
-        depth[v] = depth[u] + 1;
-        par[v] = u;
-        preDfs(v, u);
-        sizeOfSubtree[u] += sizeOfSubtree[v];
-    }
-}
-
-void hld(int u, int p) {
-    if (chainHead[curChain] == 0) {
-        chainHead[curChain] = u;
-    }
-    chainId[u] = curChain;
-    pos[u] = curPos;    
-    ++curPos;
-    int nxt = 0;
-    for (int &v : adj[u]) {
-        if (v == p) continue;
-        if (nxt == 0 || sizeOfSubtree[v] > sizeOfSubtree[nxt]) {
-            nxt = v;
-        }
-    }
-    if (nxt) hld(nxt, u);
-    for (int &v : adj[u]) {
-        if (v == p || v == nxt) continue;
-        ++curChain;
-        hld(v, u);
-    }
-}
+int n, q;
 
 void solve() {
     // Trie's solution here
-    cin >> n >> m;
-    for (int i = 1; i <= m; ++i) {
-        int u, v, op; cin >> u >> v >> op;
-        edge[i] = {u, v, op};
-    }
-    for (int i = 1; i <= m; ++i) { 
-        if (edge[i].op == 0) {
-            auto [u, v, w] = edge[i];
-            adj[u].push_back(v);
-            adj[v].push_back(u);
-        }
-    }
-    curChain = curPos = 1;
-    preDfs(1, 0);
-    hld(1, 0);
 }
 
 #define TASK "test"
