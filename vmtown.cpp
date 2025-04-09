@@ -64,6 +64,42 @@ int getLca(int u, int v) {
     else return u;
 }
 
+struct IT {
+    int lz[N * 4], st[N * 4];
+
+    void push(int id, int l, int r) {
+        if (lz[id] == 0) return;
+        st[id] += lz[id];
+        lz[id * 2] += lz[id];
+        lz[id * 2 + 1] += lz[id];
+        lz[id] = 0;
+    }
+
+    void update(int id, int l, int r, int u, int v, int val) {
+        push(id, l, r);
+        if (l > v || r < u) return;
+        if (l >= u && r <= v) {
+            lz[id] += val;
+            push(id, l, r); 
+            return;
+        }
+        int mid = (l + r) >> 1;
+        update(id * 2, l, mid, u, v, val);
+        update(id * 2 + 1, mid + 1, r, u, v, val);
+        st[id] = max(st[id * 2], st[id * 2 + 1]);
+    }
+
+    int get(int id, int l, int r, int u, int v) {
+        push(id, l, r);
+        if (l > v || r < u) return;
+        if (l >= u && r <= v) {
+            return st[id];
+        }
+        int mid = (l + r) >> 1;
+        return max(get(id * 2, l, mid, u, v), get(id * 2 + 1, mid + 1, r, u, v));
+    }
+}seg;
+
 void solve() {
     // Trie's solution here
     cin >> n;
@@ -72,7 +108,9 @@ void solve() {
         adj[u].push_back(v);
         adj[v].push_back(u);
     }
-    preDfs(i
+    preDfs(1, 0);
+    decomp(1, 0);
+    
 }
 
 #define TASK "test"
