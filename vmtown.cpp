@@ -100,6 +100,18 @@ struct IT {
     }
 }seg;
 
+//each node maintain one edge (like: par -> child)
+//node 1 maintain nothing
+
+void update(int u, int v) {
+    int lca = getLca(u, v);
+    while (idChain[lca] != idChain[u]) {
+        seg.update(1,1,n, pos[headChain[idChain[u]]] + 1, pos[u]);
+        u = par[headChain[idChain[u]]];
+    }
+    while (idChain )
+}
+
 void solve() {
     // Trie's solution here
     cin >> n;
