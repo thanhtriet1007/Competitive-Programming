@@ -13,7 +13,7 @@ const int       N      = 1e6 + 7;
 const long long oo     = 1e18 + 7;
 const long long MOD    = 1e9 + 7;
 
-int n, q;
+int n, q, m;
 vector<int>adj[N];
 
 int par[N], sz[N], idChain[N], headChain[N], pos[N], depth[N];
@@ -24,8 +24,8 @@ void preDfs(int u, int p) {
     for (int &v : adj[u]) {
         if (v == p) continue;
         par[v] = u;
-        preDfs(v, u);
         depth[v] = depth[u] + 1;
+        preDfs(v, u);
         sz[u] += sz[v];
     }
 }
@@ -65,64 +65,132 @@ int getLca(int u, int v) {
 }
 
 struct IT {
-    int lz[N * 4], st[N * 4];
-
-    void push(int id, int l, int r) {
-        if (lz[id] == 0) return;
-        st[id] += lz[id];
-        lz[id * 2] += lz[id];
-        lz[id * 2 + 1] += lz[id];
-        lz[id] = 0;
+    struct Node {
+        int cnt_zero;
+        int min_val, max_val;
+        int lazy;
+    } st[4 * N];
+    
+    void apply(int id, int l, int r, int val) {
+        st[id].min_val += val;
+        st[id].max_val += val;
+        st[id].lazy += val;
+        if (st[id].min_val == 0 && st[id].max_val == 0) {
+            st[id].cnt_zero = r - l + 1;
+        } else if (st[id].min_val > 0 || st[id].max_val < 0) {
+            st[id].cnt_zero = 0;
+        }
+        // Nếu vẫn còn phần tử 0 và phần tử khác 0 thì ta giữ nguyên cnt_zero
     }
-
+    
+    void push(int id, int l, int r) {
+        if (st[id].lazy == 0) return;
+        int mid = (l + r) / 2;
+        apply(id * 2, l, mid, st[id].lazy);
+        apply(id * 2 + 1, mid + 1, r, st[id].lazy);
+        st[id].lazy = 0;
+    }
+    
     void update(int id, int l, int r, int u, int v, int val) {
-        push(id, l, r);
-        if (l > v || r < u) return;
-        if (l >= u && r <= v) {
-            lz[id] += val;
-            push(id, l, r); 
+        if (v < l || r < u) return;
+        if (u <= l && r <= v) {
+            apply(id, l, r, val);
             return;
         }
-        int mid = (l + r) >> 1;
+        push(id, l, r);
+        int mid = (l + r) / 2;
         update(id * 2, l, mid, u, v, val);
         update(id * 2 + 1, mid + 1, r, u, v, val);
-        st[id] = max(st[id * 2], st[id * 2 + 1]);
+        st[id].min_val = min(st[id * 2].min_val, st[id * 2 + 1].min_val);
+        st[id].max_val = max(st[id * 2].max_val, st[id * 2 + 1].max_val);
+        st[id].cnt_zero = st[id * 2].cnt_zero + st[id * 2 + 1].cnt_zero;
     }
-
-    int get(int id, int l, int r, int u, int v) {
+    
+    int query(int id, int l, int r, int u, int v) {
+        if (v < l || r < u) return 0;
+        if (u <= l && r <= v) return st[id].cnt_zero;
         push(id, l, r);
-        if (l > v || r < u) return;
-        if (l >= u && r <= v) {
-            return st[id];
-        }
-        int mid = (l + r) >> 1;
-        return max(get(id * 2, l, mid, u, v), get(id * 2 + 1, mid + 1, r, u, v));
+        int mid = (l + r) / 2;
+        return query(id * 2, l, mid, u, v) + query(id * 2 + 1, mid + 1, r, u, v);
     }
 }seg;
 
 //each node maintain one edge (like: par -> child)
 //node 1 maintain nothing
 
-void update(int u, int v) {
+void update(int u, int v, int val) {
     int lca = getLca(u, v);
+
+    // Cập nhật từ u đến LCA
     while (idChain[lca] != idChain[u]) {
-        seg.update(1,1,n, pos[headChain[idChain[u]]] + 1, pos[u]);
+        int cur = pos[headChain[idChain[u]]];
+        seg.update(1, 1, n, cur, pos[u], val);
         u = par[headChain[idChain[u]]];
     }
-    while (idChain )
+
+    // Cập nhật từ v đến LCA
+    while (idChain[lca] != idChain[v]) {
+        int cur = pos[headChain[idChain[v]]];
+        seg.update(1, 1, n, cur, pos[v], val);
+        v = par[headChain[idChain[v]]];
+    }
+
+    // Nếu u và v đã gặp nhau tại LCA, không cần cập nhật lại
+    if (u == v) return;
+
+    // Cập nhật đoạn giữa u và v trong cùng một chuỗi nặng
+    if (pos[v] < pos[u]) 
+        seg.update(1, 1, n, pos[v] + 1, pos[u], val);
+    else 
+        seg.update(1, 1, n, pos[u] + 1, pos[v], val);
 }
+
+
+vector<ii>importantEdge, normalEdge;
+map<ii, bool>markEdge;
 
 void solve() {
     // Trie's solution here
-    cin >> n;
-    for (int i = 1; i < n; ++i) {
-        int u, v; cin >> u >> v;
+    cin >> n >> m;
+    for (int i = 1; i <= m; ++i) {
+        int u, v, c; cin >> u >> v >> c;
+        if (u > v) swap(u, v);
+        if (c == 0) {
+            importantEdge.push_back({u, v});
+        }
+        else {
+            normalEdge.push_back({u, v});
+            markEdge[{u, v}] = 1;
+        }
+    }
+    for (auto [u, v] : importantEdge) {
         adj[u].push_back(v);
         adj[v].push_back(u);
     }
     preDfs(1, 0);
     decomp(1, 0);
-    
+
+    for (int i = 2; i <= n; ++i) {
+        seg.update(1,1,n,i,i,0);
+    }
+    for (auto [u, v] : normalEdge) {
+        update(u, v, +1);
+    }    
+    cin >> q;
+    cout << seg.query(1,1,n,2,n) << endl;
+    while (q--) {
+        int u, v; cin >> u >> v;
+        if (u > v) swap(u, v);
+        if (markEdge[{u, v}] == 1) {
+            update(u, v, -1);
+            markEdge[{u, v}] = 0;
+        }
+        else {
+            markEdge[{u, v}] = 1;
+            update(u, v, +1);
+        }
+        cout << seg.query(1,1,n,2,n) << endl;
+    }
 }
 
 #define TASK "test"
