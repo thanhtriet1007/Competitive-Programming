@@ -17,37 +17,40 @@ int n, q, m;
 vector<int>adj[N];
 
 int par[N], sz[N], idChain[N], headChain[N], pos[N], depth[N];
-int curChain, curPos;
+int curChain = 1, curPos = 1;
 
 void preDfs(int u, int p) {
     ++sz[u];
     for (int &v : adj[u]) {
         if (v == p) continue;
-        par[v] = u;
         depth[v] = depth[u] + 1;
+        par[v] = u;
         preDfs(v, u);
         sz[u] += sz[v];
     }
 }
 
 void decomp(int u, int p) {
-    if (headChain[curChain] == 0) {
+    if (!headChain[curChain]) {
         headChain[curChain] = u;
     }
-    idChain[u] = curChain;
-    pos[u] = ++curPos;
     int nxt = 0;
+    idChain[u] = curChain;
+    pos[u] = curPos;
+    ++curPos;
     for (int &v : adj[u]) {
         if (v == p) continue;
-        if (nxt == 0 || sz[v] > sz[nxt]) {
+        if (sz[v] > sz[nxt]) {
             nxt = v;
         }
     }
     if (nxt) decomp(nxt, u);
     for (int &v : adj[u]) {
-        if (v == p || v == nxt) continue;
-        ++curChain;
-        decomp(v, u);
+        if (v == p) continue;
+        if (v != nxt) {
+            ++curChain;
+            decomp(v, u);
+        }
     }
 }
 
@@ -56,12 +59,10 @@ int getLca(int u, int v) {
         if (idChain[u] > idChain[v]) {
             u = par[headChain[idChain[u]]];
         }
-        else {
-            v = par[headChain[idChain[v]]];
-        }
+        else v = par[headChain[idChain[v]]];
     }
-    if (depth[v] < depth[u]) return v;
-    else return u;
+    if (depth[u] < depth[v]) return u;
+    return v;
 }
 
 struct IT {
@@ -135,11 +136,8 @@ void update(int u, int v, int val) {
         v = par[headChain[idChain[v]]];
     }
 
-    // Nếu u và v đã gặp nhau tại LCA, không cần cập nhật lại
-    if (u == v) return;
-
     // Cập nhật đoạn giữa u và v trong cùng một chuỗi nặng
-    if (pos[v] < pos[u]) 
+    if (depth[v] < depth[u]) 
         seg.update(1, 1, n, pos[v] + 1, pos[u], val);
     else 
         seg.update(1, 1, n, pos[u] + 1, pos[v], val);
@@ -170,7 +168,7 @@ void solve() {
     preDfs(1, 0);
     decomp(1, 0);
 
-    for (int i = 2; i <= n; ++i) {
+    for (int i = 1; i <= n; ++i) {
         seg.update(1,1,n,i,i,0);
     }
     for (auto [u, v] : normalEdge) {
