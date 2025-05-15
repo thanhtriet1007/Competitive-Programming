@@ -6,3 +6,6 @@ Hello everyone, this repository will summarize my process of learning and teachi
 Tran Hung Dao HSGS, Binh Thuan
 
 FPT University, Software Engineer
+
+# Some achivement?
+
