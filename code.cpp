@@ -15,9 +15,14 @@ const long long MOD    = 1e9 + 7;
 
 int n;
 int cnt = 0;
+int a[N];
 
 void solve() {
     // Trie's solution here
+   cin >> n;
+   for (int i = 1; i <= n; ++i) {
+      cin >> a[i];
+   }
    cout << "hello world" << endl;
 }
 
