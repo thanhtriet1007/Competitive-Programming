@@ -30,5 +30,6 @@ int main() {
     }
     /*printf("%d %d %d %d ", cntLower, cntUpper, cntNumber, cntSpec);*/
     if (ok && cntLower > 0 && cntUpper > 0 && cntNumber > 0 && cntSpec > 0) printf("YES");
+    else printf("NO");
     return 0;
 }
