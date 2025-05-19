@@ -6,7 +6,8 @@
 char a[1002];
 
 int main() {
-   
+    //freopen("input.txt", "r", stdin);
+    //freopen("output.txt", "w", stdout);
     scanf("%s", a);
     char tmp[] = "!@#$%^&*()-+";
     int cntLower = 0, cntUpper = 0, cntNumber = 0, cntSpec = 0;
